@@ -18,8 +18,8 @@ export class InfinityListDirective {
     // Listen to click events in the component
     event.preventDefault();
     let tracker = event.target;
-    let limit = tracker.scrollHeight - tracker.clientHeight;
-    if (event.target.scrollTop === limit) {
+    let limit = tracker.scrollHeight - tracker.clientHeight-200;
+    if (event.target.scrollTop >= limit) {
       this.callback.emit(event);
     }
   }
