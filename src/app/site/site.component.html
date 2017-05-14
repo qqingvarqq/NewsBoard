@@ -1,17 +1,19 @@
-<div style="margin-bottom:50px">
-  <div fxLayoutAlign="center center">
+<div style="margin-bottom:50px"  >
+  <div fxLayoutAlign="center center" fxLayoutWrap>
     <md-card fxFlex="90%" fxFlex.gt-sm="60%">
-      <div fxLayout="row">
+      <div fxLayout="row" fxLayout.xs="column">
         <img md-card-image src="{{site?.urlToIMg}}" fxFlex="30" fxFlexFill>
         <span fxFlex="5"></span>
-        <md-card-content>
-          <h1 md-color="primary">{{site?.name}}</h1>
+        <div fxLayout fxLayout="column">
+        <md-card-content >
+          <h1 md-line md-color="primary">{{site?.name}}</h1>
           <a href="{{site?.url}}">
-            <h2 style="font-weight: normal">{{site?.url}}</h2>
+            <h2 md-line style="font-weight: normal">{{site?.url}}</h2>
           </a>
-          <h2 style="font-weight: normal">Category {{site?.category}} </h2>
-          <h3 style="font-weight: normal">{{site?.description}} </h3>
+          <h2 md-line style="font-weight: normal">Category {{site?.category}} </h2>
+          <h3 md-line style="font-weight: normal">{{site?.description}} </h3>
         </md-card-content>
+        </div>
       </div>
     </md-card>
   </div>
