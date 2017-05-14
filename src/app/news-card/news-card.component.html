@@ -1,0 +1,17 @@
+<div  fxLayoutAlign="center center" style="margin-bottom:35px">
+<md-card fxFlex="90%" fxFlex.gt-sm="40%">
+    <md-card-header>
+        <md-card-title>
+          <p><b>{{newsCard?.title}}</b></p>
+        </md-card-title>
+        <img md-card-avatar src={{newsCard?.titleImg}}>
+    </md-card-header>
+    <img md-card-image src={{newsCard?.contentImg}}>
+    <md-card-content>
+        <p>{{newsCard?.description}}</p>
+    </md-card-content>
+    <md-card-actions fxLayout="column">
+        <button md-button (click)="onNavigate()" color="primary"><i class="material-icons right">send</i></button>
+    </md-card-actions>
+</md-card>
+</div>

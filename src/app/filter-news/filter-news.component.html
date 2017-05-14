@@ -1,0 +1,62 @@
+<div fxLayoutAlign="center center" style="margin-bottom:35px">
+  <md-card fxFlex="90%" fxFlex.gt-sm="40%">
+    <md-card-content>
+      <md-list dense>
+        <h1 md-subheader>Categories</h1>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">Business</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('business')" (change)="onChange($event,'business')">
+          </md-slide-toggle>
+        </md-list-item>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">Entertainment</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('entertainment')" (change)="onChange($event,'entertainment')">
+          </md-slide-toggle>
+        </md-list-item>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">Gaming</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('gaming')" (change)="onChange($event,'gaming')">
+          </md-slide-toggle>
+        </md-list-item>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">General</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('general')" (change)="onChange($event,'general')">
+          </md-slide-toggle>
+        </md-list-item>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">Music</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('music')" (change)="onChange($event,'music')">
+          </md-slide-toggle>
+        </md-list-item>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">Politics</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('politics')" (change)="onChange($event,'politics')">
+          </md-slide-toggle>
+        </md-list-item>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">Science and nature</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('science-and-nature')" (change)="onChange($event,'science-and-nature')">
+          </md-slide-toggle>
+        </md-list-item>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">Sport</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('sport')" (change)="onChange($event,'sport')">
+          </md-slide-toggle>
+        </md-list-item>
+        <md-list-item style="margin-bottom:15px" fxLayout="column">
+          <h1 fxFlex="1 1">Technology</h1>
+          <md-slide-toggle class="slideToglePadding" [checked]="this.model.categories.has('technology')" (change)="onChange($event,'technology')">
+          </md-slide-toggle>
+        </md-list-item>
+      </md-list>
+      <md-grid-list cols="2" rowHeight="50px">
+        <md-grid-tile cols="1">
+          <button md-button fxFlexFill (click)="reloadNews('top')" color="accent">Top</button>
+        </md-grid-tile>
+        <md-grid-tile cols="1">
+          <button md-button fxFlexFill (click)="reloadNews('latest')" color="accent">Latest</button>
+        </md-grid-tile>
+      </md-grid-list>
+    </md-card-content>
+  </md-card>
+</div>

@@ -1,3 +1,45 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container fullscreen>
+  <md-sidenav #sidenav mode="over">
+    <md-toolbar color="primary">
+      <span><h2>News Board</h2></span>
+      <md-divider></md-divider>
+    </md-toolbar>
+    <md-nav-list>
+      <md-list-item (click)="navigate('');sidenav.toggle();">
+        <md-icon md-list-icon>home</md-icon>
+        <h2 md-line> News feed </h2>
+      </md-list-item>
+      <md-list-item (click)="navigate('sites');sidenav.toggle();">
+        <md-icon md-list-icon>view_list</md-icon>
+        <span>  </span>
+        <h2 md-line> Site list </h2>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item (click)="navigate('about');sidenav.toggle()">
+        <md-icon md-list-icon>info</md-icon>
+        <span>  </span>
+        <h2 md-line> About </h2>
+      </md-list-item>
+    </md-nav-list>
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
+    <span fxFlex="1"></span>
+    <span>News Board</span>
+    <span fxFlex="1 1 auto"></span>
+    <md-input-container>
+      <md-placeholder>
+        <md-icon>search</md-icon>
+      </md-placeholder>
+      <input type="search" mdInput #search (keyup.enter)="onEnterSearch(search)">
+    </md-input-container>
+    <button md-icon-button (click)="navigate('filter')">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <div class="ContentScrolable">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>

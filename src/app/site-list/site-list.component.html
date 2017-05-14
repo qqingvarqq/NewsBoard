@@ -1,0 +1,13 @@
+<div fxLayoutAlign="center center">
+  <md-card fxFlex="90%" fxFlex.gt-sm="60%">
+    <md-nav-list dense> 
+      <h1 md-subheader>Sites</h1>
+      <md-list-item style="margin-bottom:10px" *ngFor="let site of sites" (click)="this.router.navigate(['/sites', site.id]);">
+        <img md-list-avatar src="{{site.urlToIMg}}">
+        <h3 md-line><b>{{site.name}}</b></h3>
+        <h5 md-line><b>Category: {{site.category}}</b></h5>
+        <p md-line >{{site.description}}</p>
+      </md-list-item>
+    </md-nav-list>
+  </md-card>
+</div>

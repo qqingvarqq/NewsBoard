@@ -1,0 +1,32 @@
+<div style="margin-bottom:50px">
+  <div fxLayoutAlign="center center">
+    <md-card fxFlex="90%" fxFlex.gt-sm="60%">
+      <div fxLayout="row">
+        <img md-card-image src="{{site?.urlToIMg}}" fxFlex="30" fxFlexFill>
+        <span fxFlex="5"></span>
+        <md-card-content>
+          <h1 md-color="primary">{{site?.name}}</h1>
+          <a href="{{site?.url}}">
+            <h2 style="font-weight: normal">{{site?.url}}</h2>
+          </a>
+          <h2 style="font-weight: normal">Category {{site?.category}} </h2>
+          <h3 style="font-weight: normal">{{site?.description}} </h3>
+        </md-card-content>
+      </div>
+    </md-card>
+  </div>
+  <div fxLayoutAlign="center center">
+    <md-card fxFlex="90%" fxFlex.gt-sm="60%">
+      <md-toolbar fxLayout="column">
+        <span fxFlexAlign="center"><h1>{{newsFilter | uppercase}} News</h1></span>
+        <md-toolbar-row *ngFor="let filter of site?.sortBysAvailable">
+          <button md-button (click)="reloadNews(filter)" color="primary" fxFlexFill>{{filter| uppercase}}</button>
+        </md-toolbar-row>
+      </md-toolbar>
+    </md-card>
+  </div>
+</div>
+
+<app-news-card *ngFor="let card of newsCards"
+               [newsCard]="card">
+</app-news-card>

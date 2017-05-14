@@ -1,0 +1,9 @@
+<div fxLayoutAlign="center center" style="margin-bottom:40px">
+    <md-card fxFlex="90%" fxFlex.gt-sm="60%">
+        <h1 md-line style="font-weight: normal;">Result for <b>{{searchValue}}</b>:</h1>
+    </md-card>
+</div>
+
+
+<app-news-card *ngFor="let news of searchData" [newsCard]="news">
+</app-news-card>
